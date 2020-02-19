@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 class Square extends Component {
 
-    render() { 
-        
-        const actualValue = this.props.value;
-        
-        return ( 
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: null,
+        }
+    }
+
+    render() {
+
+        return (
         <div>
-           <button className="square" 
+           <button className="square"
                    onClick={this.props.onClick} >
-                       {actualValue}
+                       {this.props.value}
             </button>
-        </div> 
+        </div>
     );
     }
 }
- 
+
 
 export default Square;
