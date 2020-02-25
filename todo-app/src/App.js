@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
+import Todos from "./components/Todo";
 
 function App() {
     const TODOS_URL = 'https://jsonplaceholder.typicode.com/todos';
@@ -33,20 +34,6 @@ function App() {
 
         </div>
     );
-}
-
-function Todos({id, title, completed}) {
-
-    return (
-        <tbody className="TableBody">
-        <tr>
-            <td className="TableDefinition">{id}</td>
-            <td className="TableDefinition">{title}</td>
-            <td className="TableDefinition">{completed ? 'true' : 'false'}</td>
-        </tr>
-        </tbody>
-    )
-
 }
 
 export default App;
